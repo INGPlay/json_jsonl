@@ -34,6 +34,6 @@ ddl = [{"test" : 1, "test2" : "e"},
 
 # jsonl save and load
 jj.jsonl_save("ddl.jsonl", ddl)
-jj.jsonl_load("ddl.jsonl")
+ddl_load = jj.jsonl_load("ddl.jsonl")
 
 ```
