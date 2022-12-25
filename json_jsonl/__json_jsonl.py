@@ -12,10 +12,8 @@ def json_save(fname, row_data, encoding= base_encoding) :
         json.dump(row_data, fp= f, ensure_ascii=False)
 
 def jsonl_load(fname, encoding= base_encoding) :
-    json_list = []
     with open(fname, encoding= encoding) as f:
-        for line in f.readlines():
-            json_list.append(json.loads(line))
+        json_list = [json.loads(line) for line in f.readlines()]
     return json_list
 
 def jsonl_save(fname, row_data, encoding= base_encoding) :
